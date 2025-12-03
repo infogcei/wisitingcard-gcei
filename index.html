@@ -62,7 +62,7 @@
             letter-spacing: 0.5px;
         }
 
-        /* Tagline Style */
+        /* NEW: Tagline Style */
         .tagline {
             font-size: 15px;
             font-weight: 600;
@@ -129,48 +129,20 @@
             margin-bottom: 15px;
         }
 
-        /* Founder Avatar with Photo */
         .founder-avatar {
-            width: 70px;
-            height: 70px;
+            width: 60px;
+            height: 60px;
+            background: #00796b;
             border-radius: 50%;
-            border: 3px solid white;
-            box-shadow: 0 0 0 2px #00796b;
-            flex-shrink: 0;
-            overflow: hidden;
-            background-color: #f0f0f0;
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
-        }
-
-        .founder-avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            position: relative;
-            z-index: 2;
-        }
-
-        /* Fallback if image doesn't load - Shows "NJ" */
-        .founder-avatar::before {
-            content: 'NJ';
             color: white;
             font-size: 24px;
             font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 100%;
-            background: #00796b;
-            position: absolute;
-            z-index: 1;
-        }
-
-        .founder-avatar.loaded::before {
-            display: none;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px #00796b;
+            flex-shrink: 0;
         }
 
         .founder-details {
@@ -193,7 +165,7 @@
             gap: 6px;
         }
 
-        /* Action Buttons */
+        /* SMALLER Action Buttons */
         .action-buttons {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -294,48 +266,20 @@
             margin-bottom: 12px;
         }
 
-        /* Member Avatar with Photo */
         .member-avatar {
-            width: 55px;
-            height: 55px;
+            width: 48px;
+            height: 48px;
+            background: #388e3c;
             border-radius: 50%;
-            border: 2px solid white;
-            box-shadow: 0 0 0 2px #388e3c;
-            flex-shrink: 0;
-            overflow: hidden;
-            background-color: #f0f0f0;
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
-        }
-
-        .member-avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            position: relative;
-            z-index: 2;
-        }
-
-        /* Fallback if image doesn't load - Shows initials from data-initials attribute */
-        .member-avatar::before {
-            content: attr(data-initials);
             color: white;
             font-size: 18px;
             font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 100%;
-            background: #388e3c;
-            position: absolute;
-            z-index: 1;
-        }
-
-        .member-avatar.loaded::before {
-            display: none;
+            flex-shrink: 0;
+            border: 2px solid white;
+            box-shadow: 0 0 0 2px #388e3c;
         }
 
         .member-details {
@@ -363,7 +307,7 @@
             justify-content: center;
         }
 
-        /* Call Button */
+        /* SMALLER Call Button */
         .call-button {
             display: flex;
             align-items: center;
@@ -424,7 +368,7 @@
             gap: 10px;
         }
 
-        /* Course Items */
+        /* SMALLER Course Items */
         .course-item {
             background: #e8f5e9;
             color: #004d40;
@@ -469,14 +413,14 @@
             font-weight: 500;
         }
 
-        /* Social Icons Grid - 2 lines with 3 items each */
+        /* UPDATED: 2 lines with 3 items each */
         .social-icons-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 10px;
         }
 
-        /* Social Items */
+        /* SMALLER Social Items */
         .social-item {
             display: flex;
             flex-direction: column;
@@ -589,7 +533,7 @@
             color: #b2dfdb;
         }
 
-        /* Email Link */
+        /* SMALLER Email Link */
         .email-link {
             display: inline-flex;
             align-items: center;
@@ -676,16 +620,6 @@
                 padding: 8px 15px;
                 font-size: 12px;
             }
-            
-            .founder-avatar {
-                width: 65px;
-                height: 65px;
-            }
-            
-            .member-avatar {
-                width: 50px;
-                height: 50px;
-            }
         }
 
         @media (max-width: 360px) {
@@ -739,7 +673,7 @@
                 <span class="name-education">Education Institute</span>
             </div>
             
-            <!-- Tagline -->
+            <!-- NEW: Tagline Added Here -->
             <div class="tagline">
                 Guru Ke Saath Gyan, Safalta Ki Pehchan
             </div>
@@ -762,13 +696,7 @@
             <section class="owner-section">
                 <!-- Founder Card -->
                 <div class="founder-card">
-                    <div class="founder-avatar">
-                        <!-- NISHA JANGDE PHOTO with Fallback -->
-                        <img src="https://drive.google.com/uc?export=view&id=1zJRdCFyNYgHQwEH0-ID9EgXK9EJ0ZDb6" 
-                             alt="Nisha Jangde - Founder & Director" 
-                             onload="this.parentElement.classList.add('loaded')"
-                             onerror="this.style.display='none'">
-                    </div>
+                    <div class="founder-avatar">NJ</div>
                     <div class="founder-details">
                         <div class="founder-name">Nisha Jangde</div>
                         <div class="founder-position">
@@ -807,13 +735,7 @@
                         <!-- Centre Head -->
                         <div class="team-member">
                             <div class="member-header">
-                                <div class="member-avatar" data-initials="SJ">
-                                    <!-- SANDEEP JANGDE PHOTO with Fallback -->
-                                    <img src="https://drive.google.com/uc?export=view&id=1v77frrw7HgBzT7nUHCwQtjsg2CuKCdMt" 
-                                         alt="Sandeep Jangde - Centre Head"
-                                         onload="this.parentElement.classList.add('loaded')"
-                                         onerror="this.style.display='none'">
-                                </div>
+                                <div class="member-avatar">SJ</div>
                                 <div class="member-details">
                                     <div class="member-name">Sandeep Jangde</div>
                                     <div class="member-role">
@@ -833,13 +755,7 @@
                         <!-- Operations Manager -->
                         <div class="team-member">
                             <div class="member-header">
-                                <div class="member-avatar" data-initials="DJ">
-                                    <!-- DHEERAJ JANGDE PHOTO with Fallback -->
-                                    <img src="https://drive.google.com/uc?export=view&id=17W4hecPVcfSGjr8nSeU845ywfuzvUq_D" 
-                                         alt="Dheeraj Jangde - Operations Manager"
-                                         onload="this.parentElement.classList.add('loaded')"
-                                         onerror="this.style.display='none'">
-                                </div>
+                                <div class="member-avatar">DJ</div>
                                 <div class="member-details">
                                     <div class="member-name">Dheeraj Jangde</div>
                                     <div class="member-role">
@@ -1043,13 +959,6 @@ JustDial: https://jsdl.in/DT-99QYUEQ2AEE`;
                             console.error('Failed to copy: ', err);
                             prompt('📋 Copy this text to share:', cardInfo);
                         });
-                }
-            });
-            
-            // Auto-add loaded class to images that are already loaded
-            document.querySelectorAll('img').forEach(img => {
-                if (img.complete) {
-                    img.parentElement.classList.add('loaded');
                 }
             });
         });
